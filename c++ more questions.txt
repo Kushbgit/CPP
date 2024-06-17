@@ -1,0 +1,123 @@
+
+
+
+
+
+1)Write a C++ program to define a class named Circle.
+private member: radius
+public member functions:calculate_area(),calculate_circumference()
+
+
+2)Write a C++ program to define a class named  Rectangle.
+private member:length and width
+public member functions:calculate_area(),calculate_perimeter()
+
+
+3)Write a C++ program to define a class named  Person.
+private member: name, age and country
+constructor: initialized values (parameterized)
+public member functions:getter()--->to get all values
+                        change_age()--->to change the age of given objects.
+
+4)Write a C++ program to define a class named  Person.
+ same as above question ,but they have a extra constructor i,e a copy constructor
+ create a object and copy all value of another object which get their value from constructor
+
+
+5)Write a C++ program to define a class named Car.
+protected member: company, model, and year
+constructor: initialized values (parameterized)
+public member functions:getter(),setter()
+
+6)Write a C++ program to define a class named CarEngine 
+which can inherit the above class Car and its visibility mode is public.
+its own attribute are:
+private member: engine_type,engine_no_of_cylinder
+public member functions:getter() -->to get all values.(object of child class get all values including parent)
+
+7)Write a C++ program to define a class named Triangle.
+private member: lengths of its three sides
+public member functions:calculate_area()-->using Heron's formula
+determine_type()---->to determine if the triangle is equilateral, isosceles, or scalene.
+
+
+8)Write a C++ program to define a class named Employee.
+private member: name, employee ID, dep ,designation,performance(bad-0,avg-1,good-2,very-good-3,best-4 (use default constructor)
+public member functions:setter(),getter()
+
+9)Write a C++ program to define a class named EmpSalary which can inherit the above class Employee and its visibility mode is public.
+its own attribute are:
+private member: salary,basic,hra,da,pf (basic+hra+da-pf)
+public member functions:salary(),bonus()--> if performance is equal to or above 2-->get bonus of 2000
+create a object of child and display results.
+
+
+9. Write a C++ program to implement a class called Student that has private member variables for name, class, roll number, and marks. 
+member functions to calculate the grade based on the marks and display the student's information.
+
+
+10. Write a C++ program to implement a class called Shape with virtual member functions for calculating area and perimeter.
+Derive classes such as Circle, Rectangle, and Triangle from the Shape class and override virtual functions accordingly.
+
+
+
+
+
+array of classes.
+=================
+example
+=======
+
+Write a C++ program to define a class named Employee.
+private member: name, employee ID, dep ,designation,performance(bad-0,avg-1,good-2,very-good-3,best-4)---> (use default constructor),salary.
+public member functions:default constructor (taking input from user),getter()-->get all details
+                        filter()-->in filter you have to pass a name of a employee as a argument, it can filter out the detail of all such employee.
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class Student{
+  private:
+    int employee_ID,performance,salary;
+    string name,dep,designation;
+  public:  
+    Student(){
+        cout<<"enter name of employee:";
+        cin>>name;
+        cout<<"enter Id:";
+        cin>>employee_ID;
+        cout<<"enter department :";
+        cin>>dep;
+        cout<<"enter designation:";
+        cin>>designation;
+        cout<<"enter salary:";
+        cin>>salary;
+        cout<<"enter Performance (bad-0,avg-1,good-2,very-good-3,best-4)";
+        cin>>performance;
+    }
+    
+   void filter(string s){
+       if(name==s){
+           cout<<"name:"<<name<<"salary:"<<salary<<endl;
+       }
+        
+    }
+    
+};
+
+
+int main(){
+    
+    Student s[3];
+    string ename;
+    cout<<"enter name do u want to search:";
+    cin>>ename;
+    for(int i=0;i<5;i++){
+        s[i].filter(ename);
+        cout<<"\n================================";
+    }
+ 
+   
+}

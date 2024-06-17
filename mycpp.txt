@@ -1,0 +1,50 @@
+1.Define a class to represent a bank account. Include the following members:
+
+Data members:
+1) Name of the depositor
+2) Account number
+3) Type of account
+4) Balance amount in the account.
+5) password 
+
+Member functions:
+1) To assign initial values (constructor)
+2) To deposit an amount (match password if want to perform operation)
+3) To withdraw an amount after checking the balance (match password if want to perform operation)
+4) To display name and balance.
+
+
+2.Write a C++ program to find the area of circle using class circle which have following details:
+
+a. Accept radius from the user
+b. Calculate the area
+c. Display the result
+
+3.Write a C++ program to define a class employee having members Emp-id, Emp-name, basic salary 
+and functions accept() , display() and calculate_salary().
+Calculate DA=10 % of basic salary, HRA=1500. 
+net_salary = basic_salary + da + hra
+Display the output.
+
+4.Create a C++ class Date which contains:
+private member:
+   - Day
+   - Month
+   - Year
+public:
+  set_today_date()
+  display_date()
+  Birth_day_reminder()--> user enter a DOB, function calculate after how many days yours birthday will come,
+                          if user give false input(eg: past birthdate) error message will occur.
+
+
+5. Create a class staff having fields: Staff_id , name, salary. Write a menu driven program for:
+
+1) To accept the data
+2) To display the data
+3) To sort the data by name
+
+
+
+
+
